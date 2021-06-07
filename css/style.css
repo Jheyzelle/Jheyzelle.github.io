@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+main {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.cont {
+    text-align: center;
+    position: relative;
+    user-select: none;
+}		
+.cont h1, #logo {
+    font-family: Sacramento, sans-serif;
+    font-size: 100px;
+    background: linear-gradient(to right, #0096C4, #9E2BD1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+    font-weight: 100;
+    position: relative;
+}
+.cont p {
+    font-family: "Calibri Light"
+}	
+.main-topnav {
+    font-family: "Calibri Light";
+    align-self: flex-start;
+    height: 100px;
+    width: 100vw;
+    position: absolute;
+    user-select: none;
+
+}
+.main-topnav ul {
+    list-style-type: none;
+    display: flex;
+    float: right;
+    padding: 10px;
+}
+.main-topnav ul li {
+    padding: 10px;
+}
+.main-topnav li:hover {
+    background: linear-gradient(to right, #0096C4, #9E2BD1);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#note {
+    margin-top: 10px;
+}	
+#jzel-type {
+    width: 250px;
+    position: relative;
+    bottom: -50px;
+    right: -35px;
+    float: clear;
+}
+#logo {
+    font-size: 50px;
+    float: left;
+    padding-left:30px;
+    cursor: pointer;
+}
+#msg {
+    background: linear-gradient(to right, #0096C430, #9E2BD130);
+    padding: 20px;
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    height: 120px;
+    border-radius: 20px;
+
+}

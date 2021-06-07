@@ -4,72 +4,13 @@
 	<meta charset="utf-8">
 	<title>Jheyzelle</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		body {
-			height: 100vh;
-		}
-		main {
-			height: 100%;
-			display: grid;
-			justify-content: center;
-			align-items: center;
-		}
-		.cont {
-			text-align: center;
-		}		
-		.cont h1 {
-			font-family: Sacramento, sans-serif;
-			font-size: 100px;
-			background: linear-gradient(to right, #0096C4, #9E2BD1);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-moz-background-clip: text;
-			-moz-text-fill-color: transparent;
-			-webkit-text-fill-color: transparent;
-			padding: 10px;
-			font-weight: 100;
-		}
-		.cont p {
-			font-family: "Calibri Light"
-		}	
-		.main-topnav {
-			font-family: "Calibri Light";
-			align-self: flex-start;
-			height: 100px;
-			width: 100vw;
-			position: absolute;
-			user-select: none;
-		}
-		.main-topnav ul {
-			list-style-type: none;
-			display: flex;
-			float: right;
-			padding: 10px;
-		}
-		.main-topnav ul li {
-			padding: 10px;
-		}
-		.main-topnav li:hover {
-			background: linear-gradient(to right, #0096C4, #9E2BD1);
-			color: white;
-			border-radius: 20px;
-			cursor: pointer;
-		}
-		#note {
-			margin-top: 10px;
-		}	
-	</style>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<main>
 		<nav class="main-topnav">
+			<div id="logo">Jheyzelle</div>
 			<ul>
 				<li>Projects</li>
 				<li>Art</li>
@@ -79,34 +20,15 @@
 			</ul>
 		</nav>
 		<div class="cont">
-			<h1>Jheyzelle</h1>
-			<p>Hello! This website is under construction!</p>
-			<p id="note"></p>
+				<div id="msg">
+					<p>Hello! This website is under construction!</p>
+					<p id="note"></p>
+				</div>
+				<img id="jzel-type" src="images/jzel-typing.gif" alt="Me doing work animation" draggable="false">
+				<h1>Jheyzelle</h1>
 		</div>
 	</main>
 	
-	<script>
-		let i1 = 0
-		let notesList = ["Coming soon!",
-						"It'll be done.",
-						"I swear.",
-						"That one too.",
-						"😅",
-						"Come back later!"]
-		let navItems = document.querySelectorAll(".main-topnav li")
-		
-		for (let i = 0; i< navItems.length; i++) {
-			navItems[i].addEventListener("click", note)
-		}
-
-		function note() {
-			
-			let note = document.querySelector("#note")
-			note.innerHTML = notesList[i1]
-			
-			i1++
-			if (i1 >= notesList.length) i1=0;
-		}
-	</script>
+	<script src="js/home.js"></script>
 </body>
 </html>
