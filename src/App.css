@@ -43,6 +43,7 @@ img {
 /* top navigation styles */
 .topnav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 
@@ -147,9 +148,6 @@ h2.head-contact {
   animation-name: boil2x3-3;
 }
 
-
-h2.section-heading:nth-of-type(3) {}
-
 /* section div content styles */
 .nav-section {
   width: 100%;
@@ -205,9 +203,12 @@ h2.section-heading:nth-of-type(3) {}
 /* section contact animated socials */
 ul.socials {
   display: flex;
+
+  justify-content: center;
   position: relative;
 
-  margin: 70px;
+  margin: 70px 0;
+  width: 100%;
 }
 
 .socials-anim {
@@ -218,6 +219,7 @@ ul.socials {
   overflow: hidden;
 
   position: relative;
+  flex-shrink: 0;
 }
 
 .socials-anim img {
@@ -349,5 +351,82 @@ ul.socials {
 
   to {
     top: var(--pos-3);
+  }
+}
+
+/* ==================== media queries ==================== */
+@media only screen and (max-width: 600px) {
+  .topnav {
+    justify-content: center;
+    position: relative;
+  }
+
+  .nav-section {
+    height: revert;
+  }
+
+  ul.socials {
+    flex-wrap: wrap;
+    margin: revert;
+    width: auto;
+  }
+
+  .socials-anim:nth-child(n):hover {
+    transform: scale(1.1);
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {
+  ul.socials {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .socials-anim:nth-child(n) {
+    transform: scale(1);
+    top: revert;
+
+    width: calc(var(--socials-img-dim)/7);
+    height: calc(var(--socials-img-dim)/7);
+    margin: 5px;
+  }
+
+  .socials-anim:nth-of-type(1) img {
+    height: calc(var(--socials-img-dim)*3/7);
+  }
+
+  .socials-anim:nth-child(n):hover {
+    animation: none;
+    transform: scale(1.1);
+  }
+
+  .socials-anim img {
+    width: calc(var(--socials-img-dim)*2/7);
+    height: calc(var(--socials-img-dim)*2/7);
+  }
+
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1300px) {
+  .socials-anim:nth-child(n) {
+    width: calc(var(--socials-img-dim)/6);
+    height: calc(var(--socials-img-dim)/6);
+    margin: 5px;
+  }
+
+  .socials-anim img {
+    width: calc(var(--socials-img-dim)*2/6);
+    height: calc(var(--socials-img-dim)*2/6);
+  }
+
+  .socials-anim:nth-of-type(1) img {
+    height: calc(var(--socials-img-dim)*3/6);
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .nav-section {
+    height: fit-content;
   }
 }
