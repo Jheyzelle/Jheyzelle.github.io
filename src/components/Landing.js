@@ -2,7 +2,9 @@ import { wait } from "@testing-library/user-event/dist/utils";
 import React, { useEffect } from "react";
 
 function Landing() {
+
     async function loadLanding() {
+
         let landingLogo = document.querySelector('#landing-logo')
         let landIntro = document.querySelector('#landing-intro')
         let landRoles = document.querySelector('.roles')
@@ -54,6 +56,7 @@ function Landing() {
 
     return (
         <div className="nav-section section-landing">
+  
             <div className="landing-content">
 
                 <div id="landing-intro" className="fade-slide-left">

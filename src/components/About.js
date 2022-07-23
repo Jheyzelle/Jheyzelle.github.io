@@ -39,9 +39,9 @@ function About() {
 
     return (
         <div id='anchor-about' className="nav-section section-about">
-            <h2 title='About' className='section-heading'></h2>
+            <h2 title='About' className='section-heading head-about anm'></h2>
             <div className="ab-content-container">
-                <div id="j-avi"><img alt="Jheyzelle Avatar" src={require('../assets/images/jheyzelle-avi-500.png')} draggable='false'></img></div>
+                <div id="j-avi"><img alt="Jheyzelle Avatar" src={require('../assets/images/jheyzelle-avi-500.png')} draggable='false' className='anm'></img></div>
 
                 <div className="ab-text-desc">
 

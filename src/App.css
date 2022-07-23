@@ -50,7 +50,8 @@ abbr {
 
 /* top navigation styles */
 .topnav {
-  display: flex;
+  display: none;
+
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -363,7 +364,72 @@ ul.socials {
   }
 }
 
-/* ==================== about section ==================== */
+/* ==================== section landing ==================== */
+.section-landing {
+  overflow: hidden;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#landing-logo {
+  width: 70%;
+  max-width: 800px;
+  visibility: hidden;
+}
+
+#landing-intro,
+.landing-content .roles {
+  padding: 2px;
+  font-size: 2em;
+  letter-spacing: 0.1cm;
+  text-align: center;
+}
+
+.landing-content .roles {
+  text-align: right;
+  position: relative;
+  top: -10%;
+  right: 15%;
+  width: 100%;
+}
+
+.landing-content .roles p {
+  opacity: 0;
+  animation: fadein-slide-left 2s ease-in-out 1 forwards paused;
+}
+
+@keyframes fadein-slide-left {
+  from {
+    transform: translate3d(300px, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeout-slide-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-200px, 0, 0);
+  }
+}
+
+/* ==================== ^^^section landing^^^ ==================== */
+
+/* ==================== section about ==================== */
 .section-about p {
   margin: 10px 0;
   font-size: 1.3em;
@@ -461,75 +527,13 @@ div#j-avi {
   }
 }
 
-/* ==================== section landing ==================== */
-.section-landing {
-  overflow: hidden;
-}
-
-.landing-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-#landing-logo {
-  width: 70%;
-  max-width: 800px;
-  visibility: hidden;
-}
-
-#landing-intro,
-.landing-content .roles {
-  padding: 2px;
-  font-size: 2em;
-  letter-spacing: 0.1cm;
-  text-align: center;
-}
-
-.landing-content .roles {
-  text-align: right;
-  position: relative;
-  top: -10%;
-  right: 15%;
-  width: 100%;
-}
-
-.landing-content .roles p {
-  opacity: 0;
-  animation: fadein-slide-left 2s ease-in-out 1 forwards paused;
-}
-
-@keyframes fadein-slide-left {
-  from {
-    transform: translate3d(300px, 0, 0);
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeout-slide-left {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translate3d(-200px, 0, 0);
-  }
-}
+/* ==================== ^^^section about^^^ ==================== */
 
 /* ==================== media queries ==================== */
 @media only screen and (max-width: 600px) {
 
   .topnav {
     justify-content: center;
-    position: relative;
   }
 
   .nav-section {
@@ -622,4 +626,8 @@ div#j-avi {
   .section-landing {
     height: 100vh;
   }
+}
+
+.anm {
+  animation-play-state: paused;
 }
