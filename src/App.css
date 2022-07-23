@@ -59,6 +59,7 @@ abbr {
 
   width: 100%;
   position: fixed;
+  z-index: 20;
 }
 
 .j-logo img {
@@ -77,6 +78,7 @@ abbr {
 
   padding-bottom: 20px;
   align-items: baseline;
+  cursor: pointer;
 }
 
 .nav-list li {
@@ -92,7 +94,6 @@ abbr {
 }
 
 .nav-list li:hover {
-  cursor: pointer;
   filter: brightness(0.9) invert(.5) sepia(.5) hue-rotate(70deg) saturate(200%);
 }
 
@@ -166,6 +167,7 @@ h2.head-contact {
   flex-direction: column;
 
   padding: 20px;
+  position: relative;
 }
 
 /* section contact styles */
@@ -459,9 +461,72 @@ div#j-avi {
   }
 }
 
+/* ==================== section landing ==================== */
+.section-landing {
+  overflow: hidden;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#landing-logo {
+  width: 70%;
+  max-width: 800px;
+  visibility: hidden;
+}
+
+#landing-intro,
+.landing-content .roles {
+  padding: 2px;
+  font-size: 2em;
+  letter-spacing: 0.1cm;
+  text-align: center;
+}
+
+.landing-content .roles {
+  text-align: right;
+  position: relative;
+  top: -10%;
+  right: 15%;
+  width: 100%;
+}
+
+.landing-content .roles p {
+  opacity: 0;
+  animation: fadein-slide-left 2s ease-in-out 1 forwards paused;
+}
+
+@keyframes fadein-slide-left {
+  from {
+    transform: translate3d(300px, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeout-slide-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-200px, 0, 0);
+  }
+}
 
 /* ==================== media queries ==================== */
 @media only screen and (max-width: 600px) {
+
   .topnav {
     justify-content: center;
     position: relative;
@@ -471,19 +536,32 @@ div#j-avi {
     height: revert;
   }
 
+  .section-landing {
+    height: 100vh;
+  }
+
   ul.socials {
     flex-wrap: wrap;
     margin: revert;
     width: auto;
   }
 
+  #landing-logo {
+    width: 90%;
+  }
+
   .socials-anim:nth-child(n):hover {
     transform: scale(1.1);
   }
 
+
 }
 
 @media only screen and (max-width: 1000px) {
+  .landing-content p {
+    font-size: 0.7em;
+  }
+
   ul.socials {
     flex-wrap: wrap;
     margin: 0;
@@ -539,5 +617,9 @@ div#j-avi {
 @media only screen and (max-height: 700px) {
   .nav-section {
     height: fit-content;
+  }
+
+  .section-landing {
+    height: 100vh;
   }
 }
