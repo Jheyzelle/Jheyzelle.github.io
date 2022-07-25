@@ -51,7 +51,17 @@ abbr {
 /* top navigation styles */
 .topnav {
   display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 
+  width: 100%;
+  position: fixed;
+  z-index: 20;
+}
+
+.topnav-content {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -59,8 +69,27 @@ abbr {
   padding: 20px 30px;
 
   width: 100%;
-  position: fixed;
-  z-index: 20;
+}
+
+#btn-toggle-nav {
+  display: none;
+  cursor: pointer;
+
+  margin: 5px;
+  padding: 5px;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  font-weight: bold;
+
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  width: 50px;
+  letter-spacing: 2px;
 }
 
 .j-logo img {
@@ -533,8 +562,51 @@ div#j-avi {
 @media only screen and (max-width: 600px) {
 
   .topnav {
+    display: flex;
     justify-content: center;
+    padding: 5px;
+    height: fit-content;
+    width: fit-content;
+    right: 0;
   }
+
+  .topnav-content {
+    justify-content: center;
+    flex-direction: column;
+    border: 2px dashed #000;
+
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding-top: 40px;
+  }
+
+  .topnav ul {
+    display: revert;
+  }
+
+  #btn-toggle-nav {
+    display: inline-block;
+  }
+
+  /* when navigation is closed */
+  .nav-closed {
+
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+
+  }
+
+  .nav-closed .topnav-content {
+    display: none;
+  }
+
+  .nav-closed #btn-toggle-nav {
+    display: revert;
+    position: relative;
+    margin: 0;
+  }
+  /* ^^^when navigation is closed^^^ */
 
   .nav-section {
     height: revert;
@@ -557,8 +629,6 @@ div#j-avi {
   .socials-anim:nth-child(n):hover {
     transform: scale(1.1);
   }
-
-
 }
 
 @media only screen and (max-width: 1000px) {
@@ -628,6 +698,3 @@ div#j-avi {
   }
 }
 
-.anm {
-  animation-play-state: paused;
-}
