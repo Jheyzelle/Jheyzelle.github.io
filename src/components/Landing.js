@@ -10,6 +10,7 @@ function Landing() {
         let landRoles = document.querySelector('.roles')
         let nextSec = document.querySelector('.prompt-next-sec')
 
+        await wait(1000)
         typeText(['Hello there!', 'I am'], '#landing-intro', 100)
 
         await wait(3700)
@@ -77,7 +78,7 @@ function Landing() {
 
             </div>
 
-            <div title='To About Section' className="prompt-next-sec" onClick={() => { document.getElementById('anchor-about').scrollIntoView(true) }} ><p>↧</p></div>
+            <div title='Read About Me' className="prompt-next-sec" onClick={() => { document.getElementById('anchor-about').scrollIntoView(true) }} ><p>↧</p></div>
         </div>
     )
 }

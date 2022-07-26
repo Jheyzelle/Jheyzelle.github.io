@@ -50,7 +50,7 @@ function About() {
                     <p>During my free time, I like to sketch, mainly people and objects around me. I enjoy singing and play a few instruments including the guitar and kalimba. I also like collecting memories through photos and videos to share with friends and family.</p>
                 </div>
             </div>
-            <div title='To About Section' className="prompt-next-sec next-sec" onClick={() => { document.getElementById('anchor-projects').scrollIntoView(true) }} ><p>↧</p></div>
+            <div title='View My Projects' className="prompt-next-sec next-sec" onClick={() => { document.getElementById('anchor-projects').scrollIntoView(true) }} ><p>↧</p></div>
         </div>
     )
 }
