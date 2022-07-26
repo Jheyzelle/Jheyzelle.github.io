@@ -8,6 +8,7 @@ function Landing() {
         let landingLogo = document.querySelector('#landing-logo')
         let landIntro = document.querySelector('#landing-intro')
         let landRoles = document.querySelector('.roles')
+        let nextSec = document.querySelector('.prompt-next-sec')
 
         typeText(['Hello there!', 'I am'], '#landing-intro', 100)
 
@@ -15,7 +16,6 @@ function Landing() {
         landingLogo.style.visibility = 'visible'
         await wait(3300)
         landingLogo.src = require('../assets/images/jheyzelle-logo.gif')
-
 
         await wait(500)
         // fade out welcome
@@ -30,6 +30,11 @@ function Landing() {
         landRoles.children[2].style.animationPlayState = 'running'
         landRoles.children[2].style.animationDelay = '0.9s'
 
+        await wait(3000)
+        nextSec.style.visibility = 'visible'
+        nextSec.style.animation = 'prompt-anmin 0.3s ease-in forwards'
+        await wait(300)
+        nextSec.style.removeProperty('animation')
     }
 
     async function typeText(lines, parentTag, timePerChar) {
@@ -56,7 +61,7 @@ function Landing() {
 
     return (
         <div className="nav-section section-landing">
-  
+
             <div className="landing-content">
 
                 <div id="landing-intro" className="fade-slide-left">
@@ -72,6 +77,7 @@ function Landing() {
 
             </div>
 
+            <div title='To About Section' className="prompt-next-sec" onClick={() => { document.getElementById('anchor-about').scrollIntoView(true) }} ><p>↧</p></div>
         </div>
     )
 }

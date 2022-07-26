@@ -48,6 +48,54 @@ abbr {
   text-decoration: none;
 }
 
+.prompt-next-sec {
+  cursor: pointer;
+  font-size: 1.3em;
+  visibility: hidden;
+  position: relative;
+}
+
+.prompt-next-sec p {
+  position: relative;
+}
+
+.prompt-next-sec:hover p {
+  color: var(--col-matcha);
+  animation: prompt-anmin 0.3s ease-in forwards;
+}
+
+.next-sec {
+  visibility: visible;
+}
+
+@keyframes prompt-anmin {
+  from {
+    top: -20px;
+  }
+
+  50% {
+    top: 10px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+@keyframes prompt-anmin {
+  from {
+    top: 0;
+  }
+
+  50% {
+    top: 10px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
 /* top navigation styles */
 .topnav {
   display: none;
@@ -459,18 +507,18 @@ ul.socials {
 /* ==================== ^^^section landing^^^ ==================== */
 
 /* ==================== section about ==================== */
-.section-about p {
+.ab-content-container p {
   margin: 10px 0;
   font-size: 1.3em;
 }
 
 .ab-content-container {
   display: flex;
-  height: 50%;
   flex-wrap: wrap;
 
   justify-content: center;
   align-items: center;
+  padding: 30px 0;
 }
 
 .ab-text-desc {
@@ -606,6 +654,7 @@ div#j-avi {
     position: relative;
     margin: 0;
   }
+
   /* ^^^when navigation is closed^^^ */
 
   .nav-section {
@@ -697,4 +746,3 @@ div#j-avi {
     height: 100vh;
   }
 }
-

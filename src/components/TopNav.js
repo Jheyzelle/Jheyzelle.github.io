@@ -74,12 +74,12 @@ function TopNav() {
         <div className="topnav nav-closed">
             <button id='btn-toggle-nav' onClick={toggleCollapseNav}>^-^</button>
             <div className="topnav-content">
-                <h1 className="j-logo" onClick={() => { document.getElementById('page-top').scrollIntoView(true); toggleCollapseNav() }}><img alt='Jheyzelle logo' src={require('../assets/images/jheyzelle-logo.gif')} draggable='false' className='anm'></img></h1>
+                <h1 className="j-logo" onClick={() => { document.getElementById('page-top').scrollIntoView(true) }}><img alt='Jheyzelle logo' src={require('../assets/images/jheyzelle-logo.gif')} draggable='false' className='anm'></img></h1>
 
                 <ul className="nav-list">
-                    <li title='About' onClick={() => { document.getElementById('anchor-about').scrollIntoView(true); toggleCollapseNav() }} className='anm'></li>
-                    <li title='Projects' onClick={() => { document.getElementById('anchor-projects').scrollIntoView(true); toggleCollapseNav() }} className='anm'></li>
-                    <li title='Contact' onClick={() => { document.getElementById('anchor-contact').scrollIntoView(true); toggleCollapseNav() }} className='anm'></li>
+                    <li title='About' onClick={() => { document.getElementById('anchor-about').scrollIntoView(true) }} className='anm'></li>
+                    <li title='Projects' onClick={() => { document.getElementById('anchor-projects').scrollIntoView(true) }} className='anm'></li>
+                    <li title='Contact' onClick={() => { document.getElementById('anchor-contact').scrollIntoView(true) }} className='anm'></li>
 
                 </ul>
             </div>
