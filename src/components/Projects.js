@@ -62,8 +62,6 @@ function Projects() {
         if (ind >= projListRaw.length) {
             ind = 0
         }
-
-        console.log(ind)
         let projDomList = document.querySelector('.proj-list ul').children
         projDomList[ind].dispatchEvent(new Event("click"));
     }
@@ -158,9 +156,27 @@ function Projects() {
         }
     }
 
+    function toggleTextBox() {
+        let textbox = document.querySelector('.text')
+        let projImg = document.querySelector('.slide-img')
+        if (textbox.classList.contains('hidden')) {
+            textbox.classList.remove('hidden')
+            projImg.style.removeProperty('filter')
+        } else {
+            textbox.classList.add('hidden')
+            projImg.style.filter = 'saturate(1)'
+        }
+    }
+
     useEffect(() => {
+
         createProjList()
-        setInterval(autoScroll, 10000);
+
+        let projImg = document.querySelector('.slide-img')
+        projImg.addEventListener('click', toggleTextBox)
+
+        let interval = setInterval(autoScroll, 10000);
+
     })
 
     return (
@@ -172,7 +188,7 @@ function Projects() {
                         <img alt='Project image' className="slide-img" src=''></img>
                         <div className="text">
                             <h3 className="slide-title"></h3>
-                            <p className="slide-desc"></p>
+                            <p className="slide-desc "></p>
                             <p className="slide-extlink"><a></a></p>
                         </div>
 

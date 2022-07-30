@@ -717,11 +717,11 @@ div#j-avi {
   object-fit: cover;
   top: 0;
   left: 0;
-  z-index: -5;
+
   background-color: #e6e6e6;
 
   filter: saturate(30%);
-  transition: all 0.1s;
+  transition: none;
 }
 
 .slide:hover .slide-img {
@@ -731,11 +731,14 @@ div#j-avi {
 .slide .text {
   width: auto;
   position: absolute;
+  left: 0;
+  right: 0;
   bottom: 0;
-
   padding: 10px;
   background: #ffffffe0;
   margin: 10px;
+
+  transition: all 0.1s;
 }
 
 .slide-title {
@@ -768,6 +771,17 @@ div#j-avi {
 .slide-extlink a:hover {
 
   color: var(--col-matcha);
+}
+
+.text.hidden {
+  height: 2px;
+  padding: 0;
+}
+
+.text.hidden .slide-title,
+.text.hidden .slide-desc,
+.text.hidden .slide-extlink {
+  display: none;
 }
 
 /* ==================== ^^^section projects^^^ ==================== */
