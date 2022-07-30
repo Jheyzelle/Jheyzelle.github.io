@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 function TopNav() {
 
-    const elmDetect = '#landing-logo'
+    const elmDetect = '.prompt-next-sec'
     const elmTarget = '.topnav'
 
     function toggleNav() {
