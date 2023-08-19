@@ -6,7 +6,6 @@
   padding: 0;
   box-sizing: border-box;
 
-  font-family: khand;
   transition: all 0.2s;
 }
 
@@ -248,7 +247,16 @@ h2.head-contact {
   position: relative;
 }
 
+.section-footer {
+  height: revert;
+  font-family: khand, calibri;
+}
+
 /* section contact styles */
+.section-contact {
+
+  font-family: khand;
+}
 
 .contact-email {
   margin: 5px;
@@ -444,6 +452,7 @@ ul.socials {
 /* ==================== section landing ==================== */
 .section-landing {
   overflow: hidden;
+  font-family: khand;
 }
 
 .landing-content {
@@ -452,6 +461,7 @@ ul.socials {
   justify-content: center;
   align-items: center;
   position: relative;
+
 }
 
 #landing-logo {
@@ -509,7 +519,7 @@ ul.socials {
 /* ==================== section about ==================== */
 .ab-content-container p {
   margin: 10px 0;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .ab-content-container {
@@ -519,10 +529,6 @@ ul.socials {
   justify-content: center;
   align-items: center;
   padding: 30px 0;
-}
-
-.ab-text-desc {
-  max-width: 700px;
 }
 
 div#j-avi {
@@ -605,13 +611,150 @@ div#j-avi {
 }
 
 /* ==================== ^^^section about^^^ ==================== */
+/* ==================== IndexCarousel ==================== */
+/* .inter1 {
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.ind-wrap {
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
 
+.indexcar-container {
+  /* border: 1px solid black; */
+  border-radius: 20px;
+
+  width: 700px;
+  height: 400px;
+
+  transition: all 0.2s;
+  position: relative;
+}
+
+.indexcard {
+  /* border: 1px solid black; */
+  border-radius: 2px;
+
+  width: 600px;
+  height: 400px;
+
+  font-size: 1.1em;
+  font-family: calibri;
+
+  position: absolute;
+
+  transform-origin: 100% 100%;
+
+  box-shadow: 1px 1px 3px rgb(181, 181, 181);
+
+  background: white;
+
+  padding: 10px;
+  transition: all 0.1s;
+}
+
+.indexcard:hover {
+  box-shadow: 1px 1px 5px var(--col-matcha)
+}
+
+.card1 {
+  /* background: rgb(192, 255, 192); */
+  /* transform: rotate(7deg) translate(10px, 20px); */
+  transform: rotate(4deg) translate(10px, 20px);
+  font-size: 1em;
+}
+
+.indexcard h2 {
+  color: grey;
+  font-family: khand;
+}
+
+.card1 ul li {
+  margin: 5px;
+}
+
+.card2 {
+  /* background: rgb(193, 192, 255); */
+  transform: rotate(-3deg) translate(30px, 10px);
+}
+
+/* .card3 {
+  background: rgb(255, 192, 192);
+  transform: rotate(-5deg) translate(40px, 5px);
+  font-size: 1.2em;
+} */
+
+.indextoback {
+  animation: shuffle-card3 0.6s 1 forwards;
+}
+
+.tech-skills-sec {
+  display: flex;
+  padding: 0 10px 0 10px;
+}
+
+.tech-skills-sec figure {
+  margin: 10px;
+}
+
+.tech-skills-sec figure {
+  width: 50%;
+}
+
+.tech-skills-sec figcaption {
+  font-family: khand;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.tech-skills-sec ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+#adobe-list {
+  text-transform: uppercase;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+#adobe-list li {
+  margin: 2px 8px;
+  padding-left: 0;
+}
+
+@keyframes shuffle-card3 {
+  0% {
+    /* transform: rotate(-5deg) translate(40px, 5px); */
+    z-index: 5;
+  }
+
+  70% {
+    transform: rotate(90deg) translate(-400px, -100px);
+    z-index: 5;
+  }
+
+  80% {
+    z-index: -5;
+  }
+}
+
+/* ==================== ^^^ IndexCarousel ^^^ ==================== */
 /* ==================== section projects ==================== */
 
 .proj-content {
   display: flex;
   position: relative;
   margin: 30px 0;
+  align-items: center;
 }
 
 .proj-carousel {
@@ -642,34 +785,26 @@ div#j-avi {
 }
 
 .proj-list {
-  width: 150px;
-  height: 300px;
+  width: 220px;
 
   padding: 10px;
   display: flex;
-  justify-content: center;
 
   margin: 10px;
   overflow-y: hidden;
-
-  position: relative;
-
-  bottom: -200px;
 }
 
 .proj-list ul {
-  width: 90%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  list-style-type: none;
-  position: absolute;
-  transform: translate3d(0, 85px, 0);
 }
 
 .proj-list li {
-
-  height: 100px;
-  margin: 2px 0;
+  font-family: calibri;
+  height: 30px;
+  margin: 5px 0;
 
   width: 100%;
   border-radius: 10px;
@@ -685,6 +820,9 @@ div#j-avi {
 
   background-color: #f7f7f7;
   box-shadow: 0 1px 5px grey;
+
+  padding: 5px;
+
 }
 
 
@@ -695,7 +833,7 @@ div#j-avi {
 
 .proj-list h3 {
   text-align: center;
-
+  font-weight: 100;
 }
 
 .proj-list li.sel {
@@ -743,6 +881,7 @@ div#j-avi {
 
 .slide-title {
   font-size: 1.5em;
+  font-family: khand;
 }
 
 .slide-desc {
@@ -756,7 +895,6 @@ div#j-avi {
   width: max-content;
   border-radius: 10px;
   margin: 5px 0;
-
 }
 
 .slide-extlink::before {
@@ -858,11 +996,87 @@ div#j-avi {
   .socials-anim:nth-child(n):hover {
     transform: scale(1.1);
   }
+
+  /* -----index ----- */
+
+  .section-about {
+    display: flex;
+    justify-content: center;
+    /* height: default; */
+  }
+
+  .ind-wrap {
+    height: revert;
+    width: 100%;
+  }
+
+  .ab-content-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .indexcar-container {
+    width: 100%;
+    /* background: red; */
+    height: revert;
+
+  }
+
+  .indexcard {
+    width: 100%;
+    height: revert;
+    transform: rotate(0);
+    position: relative;
+    box-shadow: none;
+    transform: revert;
+  }
+
+  .indexcard:hover {
+    box-shadow: none;
+  }
+
+  /* .card3 {
+    top: -400px;
+  } */
+
+  .section-projects {
+    /* height: revert; */
+  }
+
+  .section-contact {
+    /* height: revert; */
+  }
+
+  .proj-content {
+    width: 100%;
+  }
+
+  .proj-carousel {
+    width: 100%;
+    height: 600px;
+  }
+
 }
+
 
 @media only screen and (max-width: 1000px) {
   .landing-content p {
     font-size: 0.7em;
+  }
+
+  .proj-content {
+    width: 100%;
+    max-width: 800px;
+    /* background: blue; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .proj-carousel {
+    width: 100%;
+
   }
 
   ul.socials {
@@ -924,5 +1138,50 @@ div#j-avi {
 
   .section-landing {
     height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .proj-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proj-list {
+    bottom: 0;
+    overflow: visible;
+    height: 70px;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .proj-list ul {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transform: revert;
+    flex-direction: row;
+  }
+
+  .proj-list ul li h3 {
+    visibility: hidden;
+  }
+
+  .proj-list ul li {
+    margin: 0 2px 0 2px;
+    width: 20px;
+    height: 50px;
+    border-radius: 20px;
+
+  }
+
+  .proj-list li.sel {
+    background-color: #d1d1d1;
+    height: 60px;
+  }
+
+  .section-projects {
+    padding: 5px;
   }
 }

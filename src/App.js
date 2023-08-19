@@ -4,7 +4,7 @@ import TopNav from './components/TopNav';
 import About from './components/About';
 import Projects from './components/Projects';
 import Landing from './components/Landing';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <About></About>
       <Projects></Projects>
       <Contact></Contact>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   );
 }

@@ -4,6 +4,9 @@ function Projects() {
 
     let liHeight = 100;
     let _sel = undefined;
+    let initialty = undefined;
+    let interval = undefined;
+    let smallWindow = 1000;
 
     const projListRaw = [
         {
@@ -21,7 +24,7 @@ function Projects() {
             extl: 'https://github.com/Jheyzelle/DreamCode'
         },
         {
-            title: 'Graphic Design Portfolio',
+            title: 'Design Website',
             img: require('../assets/images/projects/graphicdesign.png'),
             desc: 'This personal brand portfolio is the final project for CCT260, an introductory course to web culture and design at Sheridan College.',
             extldesc: 'Portfolio',
@@ -44,14 +47,14 @@ function Projects() {
         {
             title: 'Adobe XD Planit',
             img: require('../assets/images/projects/planit.png'),
-            desc: '',
+            desc: "This prototype aims to analyze and improve on the design and functionality of observed calendar apps, based on students' needs for planning and organization.",
             extldesc: 'Planit on Adobe XD',
             extl: 'https://xd.adobe.com/view/7c1222fe-1a2c-4239-971f-41532c520126-2941/'
         },
         {
             title: 'Adobe XD App Manager',
             img: require('../assets/images/projects/appmngr.png'),
-            desc: '',
+            desc: "This project was inspired by Windows' start menu, desktop, taskbar, and startup programs features. The idea of this prototype was to create a simple interface for organizing and switching between a set of apps based on the user's tasks at the computer. For example, a student is going to use the computer for their afternoon online classes. The apps Onenote and Zoom from the profile titled 'School' will open on startup, so that the student is ready to learn. When the student is done and wants to play games, they can switch to the 'Gaming' profile to easily and quickly start up the apps necessary for gaming.",
             extldesc: 'Start Menu App Manager on Adobe XD',
             extl: 'https://xd.adobe.com/view/85ce8dda-5192-40d6-8932-98c0ebbb15d0-d09d/'
         },
@@ -96,32 +99,12 @@ function Projects() {
     }
 
     function setFocusedSlide() {
+        // set focused slide and reset interval
 
         if (!this.classList.contains('sel')) {
             let slide = document.querySelector('.proj-carousel')
             let projsContain = document.querySelector('.proj-list ul')
 
-            let ty = projsContain.style.transform.split('px, ')[1]
-
-            let clickedInd = parseInt(this.dataset.ind)
-            let selInd = parseInt(_sel.dataset.ind)
-
-            if (ty) {
-                let tyNew = parseInt(ty)
-                let diff = Math.abs(clickedInd - selInd)
-
-                if (clickedInd > selInd) {
-
-                    tyNew -= (liHeight * diff)
-
-                } else if (clickedInd < selInd) {
-
-                    tyNew += (liHeight * diff)
-                }
-
-                projsContain.style.transform = `translate3d(0, ${tyNew}px, 0)`
-
-            } else projsContain.style.transform = `translate3d(0px, 85px, 0px)`
 
             updateFocusedSlideContent(this.dataset.ind)
 
@@ -129,6 +112,8 @@ function Projects() {
             this.style.removeProperty('background')
             this.classList.add('sel')
             updateUnfocusedSlides(this.dataset.ind)
+
+            resetInterval()
         }
 
     }
@@ -156,6 +141,13 @@ function Projects() {
         }
     }
 
+    function resetInterval() {
+        if (interval) {
+            clearInterval(interval)
+            interval = setInterval(autoScroll, 10000);
+        }
+    }
+
     function toggleTextBox() {
         let textbox = document.querySelector('.text')
         let projImg = document.querySelector('.slide-img')
@@ -168,6 +160,20 @@ function Projects() {
         }
     }
 
+    function isWindowSmall() {
+        if (window.innerWidth < smallWindow) {
+            return true
+        }
+        return false
+    }
+
+    function carouselScrollType() {
+        let projsContain = document.querySelector('.proj-list ul')
+        if (isWindowSmall()) {
+            projsContain.style.transform = `translate3d(0px, 0px, 0px)`
+        } 
+    }
+
     useEffect(() => {
 
         createProjList()
@@ -175,7 +181,9 @@ function Projects() {
         let projImg = document.querySelector('.slide-img')
         projImg.addEventListener('click', toggleTextBox)
 
-        let interval = setInterval(autoScroll, 10000);
+        interval = setInterval(autoScroll, 10000);
+
+        // window.addEventListener('resize', carouselScrollType)
 
     })
 
