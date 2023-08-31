@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "https://jheyzelle.github.io/static/css/main.c1532e55.css",
-    "main.js": "https://jheyzelle.github.io/static/js/main.8982a6a9.js",
+    "main.css": "https://jheyzelle.github.io/static/css/main.92e31066.css",
+    "main.js": "https://jheyzelle.github.io/static/js/main.19422182.js",
     "static/js/787.035188cc.chunk.js": "https://jheyzelle.github.io/static/js/787.035188cc.chunk.js",
+    "static/media/footer-bg.png": "https://jheyzelle.github.io/static/media/footer-bg.949b1d5f6cf8f0830dd3.png",
     "static/media/requestresume.png": "https://jheyzelle.github.io/static/media/requestresume.aaa7f09fd4205466ea0f.png",
     "static/media/j-logo-write.gif": "https://jheyzelle.github.io/static/media/j-logo-write.9df0da18f2547ca6862e.gif",
     "static/media/mangobirds.png": "https://jheyzelle.github.io/static/media/mangobirds.5f200e388219311762be.png",
@@ -15,18 +16,21 @@
     "static/media/con-procreate.png": "https://jheyzelle.github.io/static/media/con-procreate.dad82b012831ab02431b.png",
     "static/media/con-youtube.png": "https://jheyzelle.github.io/static/media/con-youtube.05725c90ad16deb45aa2.png",
     "static/media/con-twitch.png": "https://jheyzelle.github.io/static/media/con-twitch.418f58d36491f524fe5f.png",
+    "static/media/returntop.png": "https://jheyzelle.github.io/static/media/returntop.dac3480d1267a70a988c.png",
+    "static/media/rough-birdload.gif": "https://jheyzelle.github.io/static/media/rough-birdload.2419d4b6b47b1b427a48.gif",
     "static/media/appmngr.png": "https://jheyzelle.github.io/static/media/appmngr.d374443884b350f6994f.png",
     "static/media/navheadings.png": "https://jheyzelle.github.io/static/media/navheadings.438858581683a2b2d596.png",
     "static/media/kiosk.png": "https://jheyzelle.github.io/static/media/kiosk.bc0574d45d1b8ff852bd.png",
     "static/media/graphicdesign.png": "https://jheyzelle.github.io/static/media/graphicdesign.a26f3817a9076274460a.png",
+    "static/media/petals.png": "https://jheyzelle.github.io/static/media/petals.ac9c3e05f5fbe8e32a20.png",
     "static/media/jheyzelle-logo.gif": "https://jheyzelle.github.io/static/media/jheyzelle-logo.c0be66d1cb6a867a55c9.gif",
     "index.html": "https://jheyzelle.github.io/index.html",
-    "main.c1532e55.css.map": "https://jheyzelle.github.io/static/css/main.c1532e55.css.map",
-    "main.8982a6a9.js.map": "https://jheyzelle.github.io/static/js/main.8982a6a9.js.map",
+    "main.92e31066.css.map": "https://jheyzelle.github.io/static/css/main.92e31066.css.map",
+    "main.19422182.js.map": "https://jheyzelle.github.io/static/js/main.19422182.js.map",
     "787.035188cc.chunk.js.map": "https://jheyzelle.github.io/static/js/787.035188cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1532e55.css",
-    "static/js/main.8982a6a9.js"
+    "static/css/main.92e31066.css",
+    "static/js/main.19422182.js"
   ]
 }
