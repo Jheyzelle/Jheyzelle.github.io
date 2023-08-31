@@ -1,9 +1,20 @@
 import { wait } from "@testing-library/user-event/dist/utils";
 import React, { useEffect } from "react";
+import { petalsFx, statePetals, togglePetals } from "./Petals";
 
 function Landing() {
 
     async function loadLanding() {
+
+        countDown(100, document.querySelector('#load-percent'), 16)
+        petalsFx()
+        await wait(2000)
+
+        loaded()
+        document.querySelector('#load-percent').remove()
+        await wait(200)
+
+        // ===
 
         let landingLogo = document.querySelector('#landing-logo')
         let landIntro = document.querySelector('#landing-intro')
@@ -38,6 +49,20 @@ function Landing() {
         nextSec.style.removeProperty('animation')
     }
 
+    // =====
+    async function countDown(startingNumber, parent, time) {
+        for (let i = startingNumber; i >= 0; i--) {
+            parent.innerHTML = i + "%";
+            await wait(time)
+        }
+    }
+
+    async function loaded() {
+        let elm = document.querySelector('#site-loading')
+        elm.style.display = 'none'
+    }
+
+    // =====
     async function typeText(lines, parentTag, timePerChar) {
 
         let container = document.querySelector(parentTag)
@@ -65,6 +90,9 @@ function Landing() {
 
             <div className="landing-content">
 
+                <img id="site-loading" src={require('../assets/images/rough-birdload.gif')} alt="Bird loading website" />
+                <span id="load-percent"></span>
+
                 <div id="landing-intro" className="fade-slide-left">
                     {/* insert animated type text */}
                 </div>
@@ -74,6 +102,8 @@ function Landing() {
                     <p>Artist</p>
                     <p>Designer</p>
                     <p>Developer</p>
+                </div>
+                <div id="petals-cont">
                 </div>
 
             </div>

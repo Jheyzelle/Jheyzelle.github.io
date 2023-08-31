@@ -31,7 +31,7 @@ function Projects() {
             extl: 'https://jheyzelle.github.io/CCTx60/260a2/'
         },
         {
-            title: 'Photography Portfolio',
+            title: 'Photography Portfolio Site',
             img: require('../assets/images/projects/photography.png'),
             desc: 'This portfolio uses the Bootstrap framework for responsive web design and website compatibility with multiple devices and screen sizes.',
             extldesc: 'Portfolio',
