@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "https://jheyzelle.github.io/static/css/main.92e31066.css",
-    "main.js": "https://jheyzelle.github.io/static/js/main.faacbd00.js",
+    "main.css": "https://jheyzelle.github.io/static/css/main.65fc5cb9.css",
+    "main.js": "https://jheyzelle.github.io/static/js/main.88f54317.js",
     "static/js/787.035188cc.chunk.js": "https://jheyzelle.github.io/static/js/787.035188cc.chunk.js",
     "static/media/footer-bg.png": "https://jheyzelle.github.io/static/media/footer-bg.949b1d5f6cf8f0830dd3.png",
     "static/media/requestresume.png": "https://jheyzelle.github.io/static/media/requestresume.aaa7f09fd4205466ea0f.png",
@@ -25,12 +25,12 @@
     "static/media/petals.png": "https://jheyzelle.github.io/static/media/petals.ac9c3e05f5fbe8e32a20.png",
     "static/media/jheyzelle-logo.gif": "https://jheyzelle.github.io/static/media/jheyzelle-logo.c0be66d1cb6a867a55c9.gif",
     "index.html": "https://jheyzelle.github.io/index.html",
-    "main.92e31066.css.map": "https://jheyzelle.github.io/static/css/main.92e31066.css.map",
-    "main.faacbd00.js.map": "https://jheyzelle.github.io/static/js/main.faacbd00.js.map",
+    "main.65fc5cb9.css.map": "https://jheyzelle.github.io/static/css/main.65fc5cb9.css.map",
+    "main.88f54317.js.map": "https://jheyzelle.github.io/static/js/main.88f54317.js.map",
     "787.035188cc.chunk.js.map": "https://jheyzelle.github.io/static/js/787.035188cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.92e31066.css",
-    "static/js/main.faacbd00.js"
+    "static/css/main.65fc5cb9.css",
+    "static/js/main.88f54317.js"
   ]
 }
